@@ -45,6 +45,7 @@ module ClientSideValidations::ActionView::Helpers
     end
 
     def apply_form_for_options!(record, object, options)
+      puts "#{record.inspect} #{object.inspect} #{options.inspect}"
       super
       options[:html][:validate] = true if options[:validate]
     end
