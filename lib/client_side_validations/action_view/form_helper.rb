@@ -2,8 +2,7 @@ module ClientSideValidations::ActionView::Helpers
   module FormHelper
     class Error < StandardError; end
 
-    def form_for(record, *args, &block)
-      options = args.extract_options!
+    def form_for(record, options = {}, &block)
       if options[:validate]
 
         # Always turn off HTML5 Validations
